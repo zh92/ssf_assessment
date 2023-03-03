@@ -4,24 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shipping address</title>
+    <title>Shipping details</title>
 </head>
 <body>
-    <h1>Shipping Address</h1>
-
-    <table>
-        <tr>
-            <td>Name:</td>
-            <td>
-               <form method="GET" action="/view2" data-th-object="${order}"></form>
-               <input type="text" data-th-field="*{name}">
-               <input type="text" data-th-field="*{address}">
-            </td>
-        </tr>
-    </table>
     <div>
-        <button type="button">Back</button>
-        <button type="button">Checkout</button>
+        <h1>Shipping Address</h1>
     </div>
+
+    <form method="GET" action="/view2" data-th-object="${order}">
+        <div>
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td>
+                        <input type="text" name="customerName" data-th-field="*{customerName}"> 
+                        <div data-th-if="${#fields.hasErrors('customerName')}">
+                            <span data-th-errors="*{customerName}" data-th-errorclass="error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td>
+                        <input type="text" name="address" data-th-field="*{address}"> 
+                        <div data-th-if="${#fields.hasErrors('address')}">
+                            <span data-th-errors="*{address}" data-th-errorclass="error"></span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <button type="submit" formmethod="GET" formaction="/">Back</button>
+            <button type="submit">Checkout</button>
+        </div>
+    </form>
 </body>
 </html>

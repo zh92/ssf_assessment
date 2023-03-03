@@ -1,7 +1,15 @@
 package sg.edu.nus.iss.ssf_assessment.models;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+
 public class Order {
+    
+    @NotNull(message="Name field cannot be empty")
+    @Min(value=2, message="Name must have at least 2 characters")
     private String customerName;
+
+    @NotNull(message="Address field cannot be empty")
     private String address;
 
     public String getCustomerName() { return customerName; }

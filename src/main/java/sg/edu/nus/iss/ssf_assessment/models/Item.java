@@ -11,12 +11,17 @@ public class Item {
     private String name;
     
     @Min(value=1, message="You must add at least 1 item")
-    private int quantity;
+    private int quantity = -1;
 
     public String getName() { return name; }
     public void setName(String item) { this.name = item;}
     public int getQuantity() { return quantity;}
-    public void setQuantity(int quantity) { this.quantity = quantity;}
+    public void setQuantity(int quantity) { 
+        if(this.quantity < 0) {
+            this.quantity = quantity;
+        }
+        this.quantity += quantity;
+    }
 
     public Item() {
     }

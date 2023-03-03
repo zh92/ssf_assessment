@@ -7,6 +7,29 @@
     <title>Invoice</title>
 </head>
 <body>
-    
+    <h1>Invoice</h1>
+
+		<table>
+			<tr>
+				<td>Invoice id:</td>
+				<td>
+
+				</td>
+			</tr>
+			<tr>
+				<td>Name:</td>
+				<td><span data-th-text="${order.customerName}"></span></td>
+			</tr>
+			<tr>
+				<td>Address:</td>
+				<td><span data-th-text="${order.address}"></span></td>
+			</tr>
+            <!--
+			<tr>
+				<td>Total:</td>
+				<td><span data-th-text="${order.totalCost}"></span></td>
+			</tr>
+            -->
+		</table>
 </body>
 </html>
