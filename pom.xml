@@ -14,7 +14,7 @@
 	<name>ssf_assessment</name>
 	<description>ssf assessment 3 Mar 2023</description>
 	<properties>
-		<java.version>19</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

@@ -43,10 +43,9 @@
 					</tr>
 				</thead>
 				<tbody>
-					<span data-th-if="${item.name == ''}">Your cart is currently empty</span>
-					<tr data-th-each="itm : ${item}">
-						<td data-th-text="itm.name"></td>
-						<td data-th-text="item.quantity"></td>
+					<tr data-th-each="item : ${items}">
+						<td data-th-text="${item.name}"></td>
+						<td data-th-text="${item.quantity}"></td>
 					</tr>
 				</tbody>
 			</table>

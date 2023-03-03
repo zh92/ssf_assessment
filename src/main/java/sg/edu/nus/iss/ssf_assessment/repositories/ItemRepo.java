@@ -22,7 +22,18 @@ public class ItemRepo {
         item = new Item("bread", 5);
         items.add(item);
     }
+
     public List<Item> findAll() {
+        return items;
+    }
+    
+    public List<Item> getItemList(){
+        Item item = new Item("apple", 3);
+        items.add(item);
+
+        item = new Item("bread", 5);
+        items.add(item);
+
         return items;
     }
 }
