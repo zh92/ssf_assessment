@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping address</title>
+</head>
+<body>
+    <h1>Shipping Address</h1>
+
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>
+               <form method="GET" action="/view2" data-th-object="${order}"></form>
+               <input type="text" data-th-field="*{name}">
+               <input type="text" data-th-field="*{address}">
+            </td>
+        </tr>
+    </table>
+    <div>
+        <button type="button">Back</button>
+        <button type="button">Checkout</button>
+    </div>
+</body>
+</html>
